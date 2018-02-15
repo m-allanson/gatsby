@@ -11,6 +11,9 @@ RUN npm install -g yarn@1.3.2
 
 WORKDIR /usr/src/app
 
+# TODO: Copy in package.json's, and install dependencies first
+# then copy in remaining source files
+# Allows dependencies layer to be cached separately from source files layer
 COPY . .
 RUN yarn && cd www && yarn
 RUN cd www && yarn run build
