@@ -16,4 +16,4 @@ docker tag "$REPO":"$TRAVIS_COMMIT" "$REPO":"$TAG"
 docker tag "$REPO":"$TRAVIS_COMMIT" "$REPO":travis-"$TRAVIS_BUILD_NUMBER"
 
 # Push
-# docker push "$REPO"
+docker push "$REPO"
