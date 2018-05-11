@@ -43,6 +43,7 @@
   "eslintIgnore": ["interfaces", "**/__tests__/fixtures/"],
   "private": true,
   "scripts": {
+    "build-packages": "babel-node scripts/build-packages.js",
     "bootstrap": "npm-run-all -s check-versions lerna-prepublish",
     "check-versions": "babel-node scripts/check-versions.js --allow-next",
     "format":
