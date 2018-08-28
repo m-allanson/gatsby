@@ -11,7 +11,7 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
-- task: YarnInstaller
+- task: YarnInstaller@0
   displayName: 'install yarn'
 
 - script: |
