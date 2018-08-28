@@ -12,7 +12,9 @@ steps:
   displayName: 'Install Node.js'
 
 - task: YarnInstaller@0
-  displayName: 'install yarn'
+  inputs:
+    versionSpec: '1.x'
+  displayName: 'Install yarn'
 
 - script: |
     npm install
