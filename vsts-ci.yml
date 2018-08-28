@@ -3,9 +3,14 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/vsts/pipelines/languages/javascript
 
-queue: 'Hosted VS2017'
+resources:
+- repo: self
+
+queue: 
+  name: 'Hosted VS2017'
 
 steps:
+
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
@@ -17,7 +22,7 @@ steps:
   displayName: 'Install yarn'
 
 - script: |
-    npm install
-    npm run bootstrap
-    npm run test
-  displayName: 'npm test'
+    yarn
+    yarn run bootstrap
+    yarn run test
+  displayName: 'test'
