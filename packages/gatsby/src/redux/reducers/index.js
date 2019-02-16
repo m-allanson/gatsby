@@ -43,5 +43,6 @@ module.exports = {
   babelrc: require(`./babelrc`),
   jsonDataPaths: require(`./json-data-paths`),
   thirdPartySchemas: require(`./third-party-schemas`),
+  log: require(`./log`),
   themes: require(`./themes`),
 }
