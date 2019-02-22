@@ -15,7 +15,6 @@ const reporter = {
   panicOnBuild: msg => logAction({ message: msg, type: `panicOnBuild` }),
   activityTimer: msg => {
     let id = null
-    // I haven't tried this. It probably doesn't work!
     return {
       start: () => {
         id = uuid()
