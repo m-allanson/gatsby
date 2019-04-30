@@ -5,5 +5,4 @@ workflow "Node workflow" {
 
 action "Node Action" {
   uses = "./action-b"
-  secrets = ["GITHUB_TOKEN"]
 }
