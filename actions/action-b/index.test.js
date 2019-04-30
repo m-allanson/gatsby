@@ -1,12 +1,14 @@
-const { Toolkit } = require('actions-toolkit')
+const { Toolkit } = require(`actions-toolkit`)
 
-describe('action-b', () => {
+describe(`action-b`, () => {
   let action, tools
 
   // Mock Toolkit.run to define `action` so we can call it
-  Toolkit.run = jest.fn((actionFn) => { action = actionFn })
+  Toolkit.run = jest.fn(actionFn => {
+    action = actionFn
+  })
   // Load up our entrypoint file
-  require('.')
+  require(`.`)
 
   beforeEach(() => {
     // Create a new Toolkit instance
@@ -15,9 +17,9 @@ describe('action-b', () => {
     tools.exit.success = jest.fn()
   })
 
-  it('exits successfully', () => {
+  it(`exits successfully`, () => {
     action(tools)
     expect(tools.exit.success).toHaveBeenCalled()
-    expect(tools.exit.success).toHaveBeenCalledWith('We did it!')
+    expect(tools.exit.success).toHaveBeenCalledWith(`We did it!`)
   })
 })

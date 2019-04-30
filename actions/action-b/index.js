@@ -1,12 +1,13 @@
 // index.js
-const { Toolkit } = require("actions-toolkit")
-const tools = new Toolkit({ event: "pull_request.closed" })
+const { Toolkit } = require(`actions-toolkit`)
+const tools = new Toolkit({ event: `pull_request.closed` })
+const { payload, repo } = tools.context
 
-if (tools.context.payload.pull_request.merged) {
+if (payload.pull_request.merged) {
   // An authenticated instance of `@octokit/rest`, a GitHub API SDK
   tools.github.git
     .deleteRef(
-      tools.context.repo({
+      repo({
         ref: `heads/${payload.pull_request.head.ref}`,
       })
     )
