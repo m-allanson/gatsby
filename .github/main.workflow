@@ -1,8 +1,8 @@
 workflow "Node workflow" {
   on = "pull_request"
-  resolves = ["Node Action"]
+  resolves = [ "Node Action" ]
 }
 
 action "Node Action" {
-  uses = "./action-b"
+  uses = "./.github/actions/action-b"
 }
