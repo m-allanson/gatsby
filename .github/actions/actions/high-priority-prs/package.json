@@ -1,5 +1,5 @@
 {
-  "name": "action-v",
+  "name": "high-priority-prs-action",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "actions-toolkit": "^2.0.0"
+    "actions-toolkit": "^2.0.0",
+    "@slack/web-api": "^5.0.1",
+    "array-to-sentence": "^2.0.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "jest": "^24.5.0"
